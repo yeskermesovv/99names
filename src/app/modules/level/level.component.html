@@ -1,0 +1,11 @@
+<div class="flex justify-center mt-10">
+  <h2 class="font-bold text-5xl mx-auto text-white">Choose your level</h2>
+</div>
+<div class="levels grid grid-cols-3 gap-10">
+  <button *ngFor="let i of levels" (click)="goToLevel(i.code)" class="card flex justify-center enabled:hover:scale-110 enabled:hover:shadow-lg transition-all bg-gray-500"
+       [disabled]="!i.available"
+       [ngClass]="{'bg-gray-500': !i.available,
+                   'bg-white': i.available}">
+    <p>{{i.code}}</p>
+  </button>
+</div>

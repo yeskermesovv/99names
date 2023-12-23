@@ -1,0 +1,13 @@
+<div class="app">
+  <h1>99 names</h1>
+  <div class="quiz">
+    <h2 id="question" class="text-left">{{questionTxt}}</h2>
+    <div id="answer-buttons">
+      <button *ngFor="let answer of questions[currentQuestionIndex]?.answers"
+              [disabled]="selected" class="btn hover:enabled:scale-105"
+              (click)="selectAnswer($event.target, answer.correct)"
+              [ngClass]="selected && answer.correct ? 'correct' : ''">{{answer.text}}</button>
+    </div>
+    <button id="next-btn" (click)="nextQuestion()">{{nextButtonTxt}}</button>
+  </div>
+</div>
