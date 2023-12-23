@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {DataService} from "../../service/data.service";
+import {Level} from "../level/level.component";
 
 @Component({
   selector: 'app-quiz',
@@ -10,37 +12,47 @@ export class QuizComponent implements OnInit {
   currentQuestionIndex = 0;
   score = 0;
   nextButton: HTMLElement | null = null;
+  levelsButton: HTMLElement | null = null;
   selected = false;
   questionTxt = "";
   nextButtonTxt = "Next";
+  levelCompleted = false;
+  levelCode = 0;
+  levels: Level[] = [];
 
   questions = [
     {
-      question: "Allah ﷲ",
+      question: "Аллаһ ﷲ",
       answers: [
-        {text: "The Most or Entirely Merciful", correct: false},
-        {text: "God", correct: true},
-        {text: "The Bestower of Mercy", correct: false},
-        {text: "The Absolutely Pure", correct: false},
+        {text: "Патша, билік Иесі", correct: false},
+        {text: "Алла, Құдай, Бір Құдай", correct: true},
+        {text: "Аса қасиетті, кемшіліктен Пәк", correct: false},
+        {text: "Адал, Сенімді, иманға Келтіруші", correct: false},
       ]
     },
     {
-      question: "Question 2?",
+      question: "Ар-Рахмән ٱلْرَّحْمَـانُ",
       answers: [
-        {text: "Asia", correct: false},
-        {text: "Australia", correct: true},
-        {text: "Kazakhstan", correct: false},
-        {text: "Africa", correct: false},
+        {text: "Құдіретті, Ұлы, Жеңімпаз", correct: false},
+        {text: "Ерекше Мейірімді", correct: true},
+        {text: "Паң, Асқақ, Ұлы", correct: false},
+        {text: "Жаратушы", correct: false},
       ]
     }
   ]
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+              private dataService: DataService,
+              private router: Router) {
   }
 
   ngOnInit() {
-
+    this.dataService.levels$.subscribe(res => {
+      this.levels = res;
+    })
+    this.levelCode = Number(this.route.snapshot.paramMap.get('id'));
     this.nextButton = document.getElementById("next-btn");
+    this.levelsButton = document.getElementById("back-to-levels-btn");
     this.startQuiz();
   }
 
@@ -96,5 +108,19 @@ export class QuizComponent implements OnInit {
     this.questionTxt = `You scored ${this.score} out of ${this.questions.length}!`;
     this.nextButtonTxt = "Play Again!";
     this.nextButton.style.display = "block";
+    this.levelsButton.style.display = "block";
+
+
+    // if all answers are correct, mark level as completed
+    if (this.score === this.questions.length) {
+      this.levelCompleted = true;
+      let currentLevel = this.levels.find(el => el.code === this.levelCode);
+      currentLevel.completed = true;
+      this.dataService.updateLevel(this.levels);
+    }
+  }
+
+  goToLevels() {
+    this.router.navigate(['level']);
   }
 }

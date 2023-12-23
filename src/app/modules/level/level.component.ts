@@ -1,21 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {DataService} from "../../service/data.service";
 
 @Component({
   selector: 'app-level',
   templateUrl: './level.component.html',
   styleUrls: ['./level.component.scss']
 })
-export class LevelComponent {
+export class LevelComponent implements OnInit{
   levels: Level[] = [];
 
-  constructor(private router: Router) {
-    for (let i = 1; i <= 3; i++) {
-      const level = new Level();
-      level.code = i;
-      level.available = i === 1; // Set the first level as available
-      this.levels.push(level);
-    }
+  constructor(private router: Router,
+              private dataService: DataService) {
+  }
+
+  ngOnInit(): void {
+    this.dataService.levels$.subscribe(res => {
+      this.levels = res;
+    })
   }
 
   goToLevel(i: number) {
@@ -23,7 +25,7 @@ export class LevelComponent {
   }
 }
 
-class Level {
+export class Level {
   code: number;
   completed: boolean = false;
   available: boolean = false;

@@ -8,6 +8,9 @@
               (click)="selectAnswer($event.target, answer.correct)"
               [ngClass]="selected && answer.correct ? 'correct' : ''">{{answer.text}}</button>
     </div>
-    <button id="next-btn" (click)="nextQuestion()">{{nextButtonTxt}}</button>
+    <div class="flex">
+      <button id="next-btn" (click)="nextQuestion()">{{nextButtonTxt}}</button>
+      <button id="back-to-levels-btn" (click)="goToLevels()">{{'Back to levels'}}</button>
+    </div>
   </div>
 </div>
