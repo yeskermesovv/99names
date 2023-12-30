@@ -13,12 +13,14 @@ export class QuizComponent implements OnInit {
   score = 0;
   nextButton: HTMLElement | null = null;
   levelsButton: HTMLElement | null = null;
+  showCreditButton: HTMLElement | null = null;
   selected = false;
   questionTxt = "";
   nextButtonTxt = "Next";
   levelCompleted = false;
   levelCode = 0;
   levels: Level[] = [];
+  allLevelsAreCompleted = false;
 
   questions = [
     {
@@ -117,10 +119,25 @@ export class QuizComponent implements OnInit {
       let currentLevel = this.levels.find(el => el.code === this.levelCode);
       currentLevel.completed = true;
       this.dataService.updateLevel(this.levels);
+      this.allLevelsAreCompleted = this.checkAllLevelsAreCompleted();
+
+      console.log("allLevelsAreCompleted", this.allLevelsAreCompleted)
+      if (this.allLevelsAreCompleted) {
+        this.showCreditButton.style.display = "block";
+      }
     }
   }
 
   goToLevels() {
     this.router.navigate(['level']);
+  }
+
+  showCredits() {
+    this.router.navigate(['congrats']);
+  }
+
+  checkAllLevelsAreCompleted() {
+    let failedlevel = this.levels.find(item => item.completed === false);
+    return failedlevel === undefined;
   }
 }

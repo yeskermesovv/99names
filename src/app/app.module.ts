@@ -7,13 +7,15 @@ import { HomeComponent } from './modules/home/home.component';
 import { QuizComponent } from './modules/quiz/quiz.component';
 import { LevelComponent } from './modules/level/level.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CongratsComponent } from './modules/congrats/congrats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     QuizComponent,
-    LevelComponent
+    LevelComponent,
+    CongratsComponent
   ],
   imports: [
     BrowserModule,
