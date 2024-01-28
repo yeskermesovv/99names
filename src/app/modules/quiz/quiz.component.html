@@ -10,8 +10,10 @@
     </div>
     <div class="flex">
       <button *ngIf="selected" id="next-btn" (click)="nextQuestion()">{{nextButtonTxt}}</button>
-      <button *ngIf="showBackToLevelsButton" id="back-to-levels-btn" class="menu-btn" (click)="goToLevels()">{{'Back to levels'}}</button>
-      <button *ngIf="allLevelsAreCompleted" id="show-credits-btn" class="menu-btn" (click)="showCredits()">{{'Show credits'}}</button>
+      <button *ngIf="showBackToLevelsButton" id="back-to-levels-btn" class="menu-btn"
+              (click)="goToLevels()">{{'Back to levels'}}</button>
+      <button *ngIf="allLevelsAreCompleted" id="show-credits-btn" class="menu-btn"
+              (click)="showCredits()">{{'Show credits'}}</button>
     </div>
   </div>
 </div>
