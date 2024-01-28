@@ -110,7 +110,7 @@ export class QuizComponent implements OnInit {
     this.showBackToLevelsButton = true;
     this.selected = true;
     this.questionTxt = `You scored ${this.score} out of ${this.questions.length}!`;
-    this.nextButtonTxt = "Play Again!";
+    this.nextButtonTxt = "Try Again!";
 
 
     // if all answers are correct, mark level as completed
