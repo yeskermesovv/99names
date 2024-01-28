@@ -21,6 +21,7 @@ export class QuizComponent implements OnInit {
   levelCode = 0;
   levels: Level[] = [];
   allLevelsAreCompleted = false;
+  showBackToLevelsButton = false;
 
   questions = [
     {
@@ -65,7 +66,6 @@ export class QuizComponent implements OnInit {
   }
 
   resetState() {
-    this.nextButton.style.display = "none";
   }
 
   selectAnswer(answer: HTMLElement, isCorrect: boolean) {
@@ -107,10 +107,10 @@ export class QuizComponent implements OnInit {
   }
 
   showScore() {
+    this.showBackToLevelsButton = true;
+    this.selected = true;
     this.questionTxt = `You scored ${this.score} out of ${this.questions.length}!`;
     this.nextButtonTxt = "Play Again!";
-    this.nextButton.style.display = "block";
-    this.levelsButton.style.display = "block";
 
 
     // if all answers are correct, mark level as completed
