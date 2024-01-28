@@ -15,6 +15,7 @@ export class DataService {
 
   updateLevel(levels: any) {
     this.levelsBehaviorSubject.next(levels);
+    localStorage.setItem("levels", JSON.stringify(levels))
   }
 
   constructor() {
@@ -25,5 +26,6 @@ export class DataService {
       this.levels.push(level);
     }
     this.levelsBehaviorSubject.next(this.levels);
+    localStorage.setItem("levels", JSON.stringify(this.levels))
   }
 }

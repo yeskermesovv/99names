@@ -49,9 +49,7 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.levels$.subscribe(res => {
-      this.levels = res;
-    })
+    this.levels = JSON.parse(localStorage.getItem("levels"));
     this.levelCode = Number(this.route.snapshot.paramMap.get('id'));
     this.nextButton = document.getElementById("next-btn");
     this.levelsButton = document.getElementById("back-to-levels-btn");
@@ -93,7 +91,9 @@ export class QuizComponent implements OnInit {
   }
 
   showQuestion() {
-    this.questionTxt = this.currentQuestionIndex + 1 + ". " + this.questions[this.currentQuestionIndex].question;
+    if (this.questions && this.questions[this.currentQuestionIndex]) {
+      this.questionTxt = this.currentQuestionIndex + 1 + ". " + this.questions[this.currentQuestionIndex].question;
+    }
   }
 
   handleNextButton() {
@@ -117,7 +117,12 @@ export class QuizComponent implements OnInit {
     if (this.score === this.questions.length) {
       this.levelCompleted = true;
       let currentLevel = this.levels.find(el => el.code === this.levelCode);
+      let nextLevel = this.levels.find(el => (el.code === this.levelCode + 1));
       currentLevel.completed = true;
+      if (nextLevel) {
+        nextLevel.available = true;
+      }
+      console.log("levels", this.levels);
       this.dataService.updateLevel(this.levels);
       this.allLevelsAreCompleted = this.checkAllLevelsAreCompleted();
 
@@ -139,5 +144,9 @@ export class QuizComponent implements OnInit {
   checkAllLevelsAreCompleted() {
     let failedlevel = this.levels.find(item => item.completed === false);
     return failedlevel === undefined;
+  }
+
+  getNextLevel() {
+
   }
 }

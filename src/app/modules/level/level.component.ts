@@ -15,15 +15,7 @@ export class LevelComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.dataService.levels$.subscribe(res => {
-      this.levels = res;
-
-      // find last completed level and open next one
-      let lastCompletedLevelIndex = this.findLastIndex(this.levels, 'completed', true);
-      if (lastCompletedLevelIndex !== -1 && this.levels.length - lastCompletedLevelIndex > 1) {
-        this.levels[lastCompletedLevelIndex + 1].available = true;
-      }
-    })
+    this.levels = JSON.parse(localStorage.getItem("levels"));
   }
 
   goToLevel(i: number) {
