@@ -8,6 +8,12 @@
               (click)="selectAnswer($event.target, answer.correct)"
               [ngClass]="selected && answer.correct ? 'correct' : ''">{{answer.text}}</button>
     </div>
+    <div *ngIf="levelFailed" class="flex justify-center">
+      <img class="max-h-40" src="/assets/images/failed.png" alt="level failed">
+    </div>
+    <div *ngIf="levelPassed" class="flex justify-center">
+      <img class="max-h-40" src="/assets/images/passed.png" alt="level passed">
+    </div>
     <div class="flex">
       <button *ngIf="selected" id="next-btn" (click)="nextQuestion()">{{nextButtonTxt}}</button>
       <button *ngIf="showBackToLevelsButton" id="back-to-levels-btn" class="menu-btn"

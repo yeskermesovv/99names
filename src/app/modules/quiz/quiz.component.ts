@@ -17,7 +17,8 @@ export class QuizComponent implements OnInit {
   selected = false;
   questionTxt = "";
   nextButtonTxt = "Next";
-  levelCompleted = false;
+  levelFailed = false;
+  levelPassed = false;
   levelCode = 0;
   levels: Level[] = [];
   allLevelsAreCompleted = false;
@@ -50,6 +51,8 @@ export class QuizComponent implements OnInit {
   }
 
   resetState() {
+    this.levelFailed = false;
+    this.levelPassed = false;
   }
 
   selectAnswer(answer: HTMLElement, isCorrect: boolean) {
@@ -96,10 +99,8 @@ export class QuizComponent implements OnInit {
     this.questionTxt = `You scored ${this.score} out of ${this.questions.length}!`;
     this.nextButtonTxt = "Try Again!";
 
-
     // if all answers are correct, mark level as completed
     if (this.score === this.questions.length) {
-      this.levelCompleted = true;
       let currentLevel = this.levels.find(el => el.code === this.levelCode);
       let nextLevel = this.levels.find(el => (el.code === this.levelCode + 1));
       currentLevel.completed = true;
@@ -109,11 +110,9 @@ export class QuizComponent implements OnInit {
       console.log("levels", this.levels);
       this.dataService.updateLevel(this.levels);
       this.allLevelsAreCompleted = this.checkAllLevelsAreCompleted();
-
-      console.log("allLevelsAreCompleted", this.allLevelsAreCompleted)
-      if (this.allLevelsAreCompleted) {
-        this.showCreditButton.style.display = "block";
-      }
+      this.levelPassed = true;
+    } else {
+      this.levelFailed = true;
     }
   }
 
@@ -128,9 +127,5 @@ export class QuizComponent implements OnInit {
   checkAllLevelsAreCompleted() {
     let failedlevel = this.levels.find(item => item.completed === false);
     return failedlevel === undefined;
-  }
-
-  getNextLevel() {
-
   }
 }
