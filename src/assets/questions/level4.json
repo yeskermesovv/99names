@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Әл-Қаһһәр  القَهَّارُ",
+    "answers": [
+      {
+        "text": "Толық басқарушы",
+        "correct": false
+      },
+      {
+        "text": "Үстемдік етуші, Жоюшы",
+        "correct": true
+      },
+      {
+        "text": "Бәрін Білуші",
+        "correct": false
+      },
+      {
+        "text": "Қайта Тірілтуші",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Уәһһәб  الوَهَّابُ",
+    "answers": [
+      {
+        "text": "Жоғарылатушы, Биіктетуші",
+        "correct": false
+      },
+      {
+        "text": "Жеңуші, Ашушы",
+        "correct": false
+      },
+      {
+        "text": "Дәрежені төмендетуші",
+        "correct": false
+      },
+      {
+        "text": "Беруші, Сыйлаушы, өте Жомарт",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": " Ар-Раззәқ  الرَّزَّاقُ",
+    "answers": [
+      {
+        "text": "Дана, хикмет Иесі",
+        "correct": false
+      },
+      {
+        "text": "Мұра беруші, ризық пен несібе Беруші",
+        "correct": true
+      },
+      {
+        "text": "Ақиқат, Хақиқи",
+        "correct": false
+      },
+      {
+        "text": "Мұңсыз, Мұқтажсыз",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Фәттәх  الفَتَّاحُ",
+    "answers": [
+      {
+        "text": "Ашушы, жеңіс Беруші",
+        "correct": true
+      },
+      {
+        "text": "Мұра беруші, ризық пен несібе Беруші",
+        "correct": false
+      },
+      {
+        "text": "Қайта Тірілтуші",
+        "correct": false
+      },
+      {
+        "text": "Даңқты асырушы, жеңіс беруші",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-`Алим  العَلِيمُ",
+    "answers": [
+      {
+        "text": "Айқын, Бәрінен жоғары тұрушы",
+        "correct": false
+      },
+      {
+        "text": "Әділетті",
+        "correct": false
+      },
+      {
+        "text": "Бәрін Білуші",
+        "correct": true
+      },
+      {
+        "text": "Даңқты асырушы, жеңіс беруші",
+        "correct": false
+      }
+    ]
+  }
+]

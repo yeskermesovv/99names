@@ -8,6 +8,7 @@ import { QuizComponent } from './modules/quiz/quiz.component';
 import { LevelComponent } from './modules/level/level.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CongratsComponent } from './modules/congrats/congrats.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CongratsComponent } from './modules/congrats/congrats.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

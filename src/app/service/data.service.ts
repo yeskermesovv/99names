@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {Level} from "../modules/level/level.component";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class DataService {
     localStorage.setItem("levels", JSON.stringify(levels))
   }
 
-  constructor() {
-    for (let i = 1; i <= 3; i++) {
+  constructor(private httpClient: HttpClient) {
+    for (let i = 1; i <= 6; i++) {
       const level = new Level();
       level.code = i;
       level.available = i === 1; // Set the first level as available
@@ -27,5 +28,10 @@ export class DataService {
     }
     this.levelsBehaviorSubject.next(this.levels);
     localStorage.setItem("levels", JSON.stringify(this.levels))
+  }
+
+  getQuestionsByLevel(level: number) {
+    let url = `/assets/questions/level${level}.json`;
+    return this.httpClient.get<any[]>(url);
   }
 }

@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Әл-Мутәкәббир المُتَكَبِّر",
+    "answers": [
+      {
+        "text": "Паң, Асқақ, Ұлы",
+        "correct": true
+      },
+      {
+        "text": "Кешірімшіл, Аса кешірімді",
+        "correct": false
+      },
+      {
+        "text": "Қазы, Төреші",
+        "correct": false
+      },
+      {
+        "text": "Асқақ, Бәрінен Биік",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Халиқ الخَالِقُ",
+    "answers": [
+      {
+        "text": "Ризықтандырушы",
+        "correct": false
+      },
+      {
+        "text": "Бәрін Білуші",
+        "correct": false
+      },
+      {
+        "text": "Аса ұлық, аса мәртебелі",
+        "correct": false
+      },
+      {
+        "text": "Жаратушы",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Әл-Бәри` البَارِىءُ",
+    "answers": [
+      {
+        "text": "Кеңейтуші",
+        "correct": false
+      },
+      {
+        "text": "Жоқтан бар етуші",
+        "correct": true
+      },
+      {
+        "text": "Бәрін Білуші",
+        "correct": false
+      },
+      {
+        "text": "Бәрін Көруші",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Мусаууир  المُصَوِّرُ",
+    "answers": [
+      {
+        "text": "Дос, Жанашыр",
+        "correct": false
+      },
+      {
+        "text": "Бейнелеуші, пішін Беруші",
+        "correct": true
+      },
+      {
+        "text": "Игілікті, Даңқты",
+        "correct": false
+      },
+      {
+        "text": "Мирасқор",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Ғаффар  الغَفَّارُ",
+    "answers": [
+      {
+        "text": "Сый беруші",
+        "correct": false
+      },
+      {
+        "text": "Бәрінен Хабардар",
+        "correct": false
+      },
+      {
+        "text": "Өктем, шексіз қаһар Иесі",
+        "correct": false
+      },
+      {
+        "text": "Кешірімшіл, күнәларды Жасырушы",
+        "correct": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Әл-Музилл  المُذِلُّ",
+    "answers": [
+      {
+        "text": "Кеңпейілді, Бәрін қамтушы",
+        "correct": false
+      },
+      {
+        "text": "Туралыққа Нұсқаушы",
+        "correct": false
+      },
+      {
+        "text": "Бәрін Көруші",
+        "correct": false
+      },
+      {
+        "text": "Қорлаушы, Әлсіретуші, күш Алушы",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Әс-Сәми`  السَّمِيعُ",
+    "answers": [
+      {
+        "text": "Кеңпейілді, Бәрін қамтушы",
+        "correct": false
+      },
+      {
+        "text": "Бәрін Естуші",
+        "correct": true
+      },
+      {
+        "text": "Бәрін Көруші",
+        "correct": false
+      },
+      {
+        "text": "Асқақ, Бәрінен Биік",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Бәсыр  البَصِيرُ",
+    "answers": [
+      {
+        "text": "Бәрін Көруші",
+        "correct": true
+      },
+      {
+        "text": "Бәрін Естуші",
+        "correct": false
+      },
+      {
+        "text": "Бәрін Білуші",
+        "correct": false
+      },
+      {
+        "text": "Бәрінен Хабардар",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Хәкәм   الحَكَمُ",
+    "answers": [
+      {
+        "text": "Мирасқор",
+        "correct": false
+      },
+      {
+        "text": "Қазы, аса жоғары Төреші, Шешуші",
+        "correct": true
+      },
+      {
+        "text": "Дана, хикмет Иесі",
+        "correct": false
+      },
+      {
+        "text": "Әділетті, Әділ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-`Адл  العَدْلُ",
+    "answers": [
+      {
+        "text": "Әмірші",
+        "correct": false
+      },
+      {
+        "text": "Әділетті, Әділ",
+        "correct": true
+      },
+      {
+        "text": "Тыйым салушы, Тоқтатушы",
+        "correct": false
+      },
+      {
+        "text": "Қазы, Төреші",
+        "correct": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Әс-Сәләм السَّلاَمُ",
+    "answers": [
+      {
+        "text": "Асқақ, Бәрінен Биік",
+        "correct": false
+      },
+      {
+        "text": "Бейбітшілік пен қауіпсіздікті Беруші, бейбітшілік Орнатушы",
+        "correct": true
+      },
+      {
+        "text": "Куәгер, барлық нәрсеге куә болушы",
+        "correct": false
+      },
+      {
+        "text": "Мәңгі Тірі",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Му`мин المُؤْمِنُ",
+    "answers": [
+      {
+        "text": "Адал, Сенімді, иманға Келтіруші",
+        "correct": true
+      },
+      {
+        "text": "Бәрінен Хабардар",
+        "correct": false
+      },
+      {
+        "text": "Жоқтан бар етуші",
+        "correct": false
+      },
+      {
+        "text": "Құдіретті",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Муһәймин المُهَيمِنُ",
+    "answers": [
+      {
+        "text": "Аса сабырлы",
+        "correct": false
+      },
+      {
+        "text": "Әділетті",
+        "correct": false
+      },
+      {
+        "text": "Ізгі, күллі игіліктің, жомарттықтың Иесі",
+        "correct": false
+      },
+      {
+        "text": "Сақтаушы, Қорғаушы",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Әл-`Азиз العَزِيزُ",
+    "answers": [
+      {
+        "text": "Есептеуші",
+        "correct": false
+      },
+      {
+        "text": "Құдіретті, Ұлы, Жеңімпаз",
+        "correct": true
+      },
+      {
+        "text": "Сый беруші",
+        "correct": false
+      },
+      {
+        "text": "Табушы, Бай",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Әл-Жәббәр الجَبَّارُ",
+    "answers": [
+      {
+        "text": "Кешірімшіл, Аса кешірімді",
+        "correct": false
+      },
+      {
+        "text": "Күшті, Бойсындырушы, Жеңілмейтін",
+        "correct": true
+      },
+      {
+        "text": "Дос, Жанашыр",
+        "correct": false
+      },
+      {
+        "text": "Құдіретті, Ұлы, Жеңімпаз",
+        "correct": false
+      }
+    ]
+  }
+]

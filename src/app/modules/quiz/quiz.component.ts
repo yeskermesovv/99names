@@ -22,27 +22,7 @@ export class QuizComponent implements OnInit {
   levels: Level[] = [];
   allLevelsAreCompleted = false;
   showBackToLevelsButton = false;
-
-  questions = [
-    {
-      question: "Аллаһ ﷲ",
-      answers: [
-        {text: "Патша, билік Иесі", correct: false},
-        {text: "Алла, Құдай, Бір Құдай", correct: true},
-        {text: "Аса қасиетті, кемшіліктен Пәк", correct: false},
-        {text: "Адал, Сенімді, иманға Келтіруші", correct: false},
-      ]
-    },
-    {
-      question: "Ар-Рахмән ٱلْرَّحْمَـانُ",
-      answers: [
-        {text: "Құдіретті, Ұлы, Жеңімпаз", correct: false},
-        {text: "Ерекше Мейірімді", correct: true},
-        {text: "Паң, Асқақ, Ұлы", correct: false},
-        {text: "Жаратушы", correct: false},
-      ]
-    }
-  ]
+  questions = [];
 
   constructor(private route: ActivatedRoute,
               private dataService: DataService,
@@ -54,7 +34,11 @@ export class QuizComponent implements OnInit {
     this.levelCode = Number(this.route.snapshot.paramMap.get('id'));
     this.nextButton = document.getElementById("next-btn");
     this.levelsButton = document.getElementById("back-to-levels-btn");
-    this.startQuiz();
+
+    this.dataService.getQuestionsByLevel(this.levelCode).subscribe(res => {
+      this.questions = res;
+      this.startQuiz();
+    });
   }
 
   startQuiz() {

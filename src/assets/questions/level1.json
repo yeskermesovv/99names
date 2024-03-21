@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Аллаһ ﷲ",
+    "answers": [
+      {"text": "Патша, билік Иесі", "correct": false},
+      {"text": "Алла, Құдай, Бір Құдай", "correct": true},
+      {"text": "Аса қасиетті, кемшіліктен Пәк", "correct": false},
+      {"text": "Адал, Сенімді, иманға Келтіруші", "correct": false}
+    ]
+  },
+  {
+    "question": "Ар-Рахмән ٱلْرَّحْمَـانُ",
+    "answers": [
+      {"text": "Құдіретті, Ұлы, Жеңімпаз", "correct": false},
+      {"text": "Ерекше Мейірімді", "correct": true},
+      {"text": "Паң, Асқақ, Ұлы", "correct": false},
+      {"text": "Жаратушы", "correct": false}
+    ]
+  },
+  {
+    "question": "Ар-Рахим الرَّحِيمُ",
+    "answers": [
+      {"text": "Аса рахымды", "correct": true},
+      {"text": "Ерекше Мейірімді", "correct": false},
+      {"text": "Паң, Асқақ, Ұлы", "correct": false},
+      {"text": "Бейнелеуші", "correct": false}
+    ]
+  },
+  {
+    "question": "Әл-Мәлик المَلِكُ",
+    "answers": [
+      {"text": "Өктем, шексіз қаһар Иесі", "correct": false},
+      {"text": "Сый беруші", "correct": false},
+      {"text": "Үстем, Аса даңқты, бәріне құдіретті", "correct": false},
+      {"text": "Патша, билік Иесі", "correct": true}
+    ]
+  },
+  {
+    "question": "Әл-Қуддус القُدُّوسُ",
+    "answers": [
+      {"text": "Әлемдердің Жаратушысы", "correct": false},
+      {"text": "Аса қасиетті, кемшіліктен Пәк", "correct": true},
+      {"text": "Жоқтан бар етуші", "correct": false},
+      {"text": "Жаратушы", "correct": false}
+    ]
+  }
+]
